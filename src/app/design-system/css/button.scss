@@ -1,0 +1,28 @@
+.btn {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.52px;
+    background: #fff;
+    color: var(--primary, #477FEB);
+    padding: 6px 16px 6px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--primary, #477FEB);
+    transition-duration: 0.2s;
+}
+
+.btn:hover {
+    background: aliceblue;
+    cursor: pointer;
+}
+
+.btn:active {
+    background: #f0f0f0;
+}
+
+.btn:disabled {
+    background: #f0f0f0;
+    color: #b3b3b3;
+    border: 1px solid #b3b3b3;
+    cursor: not-allowed;
+}

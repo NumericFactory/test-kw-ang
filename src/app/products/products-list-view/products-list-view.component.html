@@ -1,0 +1,25 @@
+<div class="container">
+    <!-- 1 Searchbar-->
+    <searchbar [categories]="store.categories()" (search)="searchProducts($event)" />
+
+    <ui-loader [style.opacity]="store.isLoading()?1:0"></ui-loader>
+
+    <p class="total">{{store.pagination.total() | pluralize:'product'}}</p>
+
+    <!-- 2 Products list-->
+    <div class="row row-cols-4">
+        @for(product of store.products(); track product.id) {
+        <div class="col">
+            <product-card [product]="product" />
+        </div>
+        }
+        @empty {
+        <p>No product.</p>
+        }
+    </div>
+
+    <!-- 3 Pagination -->
+    <ui-pagination (perPageChanged)="perPageChanged($event)" (pageChanged)="pageChanged($event)"
+        [currentPage]="store.page()" [total]="store.totalPages()" />
+
+</div>

@@ -1,0 +1,15 @@
+<div class="pagination-container">
+
+    <select #select (change)="setPerPage(select.value)">
+        <option selected value="4">4/page</option>
+        <option value="8">8/page</option>
+        <option value="20">20/page</option>
+        <option value="30">30/page</option>
+    </select>
+
+    <button (click)="previousPage()" [disabled]="total===1 || currentPage===1" class="btn">-</button>
+    <span class="pagination-text">
+        {{currentPage}}/{{total}}
+    </span>
+    <button (click)="nextPage()" [disabled]="total===1 || currentPage===total" class="btn">+</button>
+</div>

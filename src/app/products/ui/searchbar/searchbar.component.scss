@@ -1,0 +1,10 @@
+.searchbar {
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+
+    >* {
+        margin-right: 4px;
+    }
+}

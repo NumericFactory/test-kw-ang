@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import './app/design-system/css/reset.scss';
+@import './app/design-system/css/variables.scss';
+@import './app/design-system/css/fonts.scss';
+@import './app/design-system/css/layout.scss';
+@import './app/design-system/css/form.scss';
+@import './app/design-system/css/button.scss';
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #333;
+}

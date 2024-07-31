@@ -1,0 +1,46 @@
+.pagination-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+
+    select {
+        margin: 0 4px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    button {
+        font-size: 18px;
+        font-weight: 700;
+        padding: 8px 12px;
+        border-color: var(--secondary-100);
+        color: var(--text);
+
+        &:hover {
+            background-color: var(--text-lighter);
+        }
+
+        &:active {
+            background-color: var(--secondary-100);
+        }
+
+        &:disabled {
+            background-color: var(--secondary-100);
+        }
+    }
+
+    .pagination-text {
+        margin: 0 4px;
+        font-family: Roboto;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pagination-container {
+        justify-content: center;
+    }
+}

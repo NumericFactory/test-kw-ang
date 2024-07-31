@@ -1,0 +1,23 @@
+<div class="searchbar">
+
+    <!-- select category-->
+    <ui-form-field textLabel="Category">
+        <select [formControl]="categorySelectControl">
+            <option value="">All categories</option>
+            @for(category of categories; track category.name) {
+            <option value="{{category.slug}}">{{category.name}}</option>
+            }
+        </select>
+    </ui-form-field>
+
+    <!-- sort by price-->
+    <ui-form-field textLabel="Sort by">
+        <select [formControl]="sortSelectControl">
+            <option value="">none</option>
+            <option value="asc">price - to +</option>
+            <option value="desc">price + to -</option>
+        </select>
+    </ui-form-field>
+
+
+</div>
