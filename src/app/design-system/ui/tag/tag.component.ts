@@ -19,6 +19,6 @@ import { Component, Input } from '@angular/core';
 export class TagComponent {
 
   @Input({ required: true }) tagText!: string;
-  @Input() tagColor: 'success' | 'warning' | 'danger' | 'info' | 'primary' | 'secondary' = 'info';
+  @Input() tagColor: 'success' | 'warning' | 'danger' = 'success';
 
 }

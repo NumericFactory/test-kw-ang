@@ -10,7 +10,7 @@ describe('FormFieldComponent', () => {
     await TestBed.configureTestingModule({
       imports: [FormFieldComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(FormFieldComponent);
     component = fixture.componentInstance;
@@ -20,4 +20,11 @@ describe('FormFieldComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should display the label : Category', () => {
+    component.textLabel = 'Category';
+    fixture.detectChanges();
+    expect(fixture.nativeElement.querySelector('label').textContent).toContain('Category');
+  });
+
 });

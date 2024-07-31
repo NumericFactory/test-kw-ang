@@ -16,10 +16,10 @@ describe('ButtonComponent', () => {
     button = fixture.nativeElement.querySelector('button');
   });
 
-  it('should display the text : Text Button', () => {
-    component.buttonText = 'Text Button';
+  it('should display the text : Hello Fred!', () => {
+    component.buttonText = 'Hello Fred!';
     fixture.detectChanges();
-    expect(button.textContent).toContain('Text Button');
+    expect(button.textContent).toContain('Hello Fred!');
   });
 
 });

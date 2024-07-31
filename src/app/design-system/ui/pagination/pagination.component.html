@@ -7,9 +7,9 @@
         <option value="30">30/page</option>
     </select>
 
-    <button (click)="previousPage()" [disabled]="total===1 || currentPage===1" class="btn">-</button>
+    <button (click)="previousPage()" [disabled]="total===1 || currentPage===1" class="btn previous">-</button>
     <span class="pagination-text">
         {{currentPage}}/{{total}}
     </span>
-    <button (click)="nextPage()" [disabled]="total===1 || currentPage===total" class="btn">+</button>
+    <button class="next" (click)="nextPage()" [disabled]="total===1 || currentPage===total" class="btn next">+</button>
 </div>

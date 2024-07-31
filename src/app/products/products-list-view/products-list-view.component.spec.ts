@@ -1,7 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ProductsListViewComponent } from './products-list-view.component';
 import { ProductStore } from '../data/product.store';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+
 
 describe('ProductsListViewComponent', () => {
   let component: ProductsListViewComponent;
@@ -9,9 +11,15 @@ describe('ProductsListViewComponent', () => {
   let storeService, componentStoreService;
   let el: HTMLElement;
 
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProductsListViewComponent]
+      imports: [ProductsListViewComponent],
+      providers: [
+        provideHttpClient(), // Provide the HttpClient along with HttpClientTesting
+        provideHttpClientTesting(),
+        ProductStore
+      ]
     }).compileComponents();
     fixture = TestBed.createComponent(ProductsListViewComponent);
     component = fixture.componentInstance;

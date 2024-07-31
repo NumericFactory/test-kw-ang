@@ -10,7 +10,7 @@ describe('SearchbarComponent', () => {
     await TestBed.configureTestingModule({
       imports: [SearchbarComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(SearchbarComponent);
     component = fixture.componentInstance;
@@ -19,5 +19,12 @@ describe('SearchbarComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should emit the search event', () => {
+    spyOn(component.search, 'emit');
+    component.categorySelectControl.setValue('category');
+    component.sortSelectControl.setValue('asc');
+    expect(component.search.emit).toHaveBeenCalled();
   });
 });
