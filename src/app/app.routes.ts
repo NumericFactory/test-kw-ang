@@ -1,11 +1,15 @@
 import { Routes } from '@angular/router';
-import { ProductsListViewComponent } from './products/products-list-view/products-list-view.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'products', pathMatch: 'full' },
-    { path: 'products', component: ProductsListViewComponent },
-    // {
-    //     'path': 'products',
-    //     'loadChildren': () => import('./products/products.module').then(m => m.ProductsModule)
-    // },
+    {
+        path: 'products',
+        loadComponent: () => import('./products/products-list-view/products-list-view.component')
+            .then(m => m.ProductsListViewComponent)
+    },
+    {
+        path: '**',
+        loadComponent: () => import('./shared/components/not-found/not-found.component')
+            .then(m => m.NotFoundComponent)
+    }
 ];

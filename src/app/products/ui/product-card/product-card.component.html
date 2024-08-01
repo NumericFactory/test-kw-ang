@@ -4,7 +4,7 @@
         @if(product.availabilityStatus) {
         <ui-tag [tagText]="product.availabilityStatus" [tagColor]="getTagColor(product)"></ui-tag>
         }
-        <img [src]="product.thumbnail" width="400" height="200" priority alt="{{ product.title }}">
+        <img [src]="product.thumbnail" width="400" height="200" alt="{{ product.title }}">
     </div>
     <div class="card-body">
         <div class="card-info">

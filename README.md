@@ -8,6 +8,9 @@
 - `npm install` pour installer les dépendances
 - puis `ng serve` et naviguer sur `http://localhost:4200/`
 
+## Lancer les tests
+- `ng test`
+
 ## Design system
 
 un folder `app/design-system` contient :

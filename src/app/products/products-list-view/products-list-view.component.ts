@@ -9,6 +9,7 @@ import { PaginationComponent } from '../../design-system/ui/pagination/paginatio
 import { PluralizePipe } from '../../shared/pipes/pluralize.pipe';
 import { searchValueObject } from '../value-object/search-value-object';
 import { LoaderComponent } from '../../design-system/ui/loader/loader.component';
+import { ProductCardPlaceholderComponent } from '../ui/product-card-placeholder/product-card-placeholder.component';
 
 
 @Component({
@@ -18,7 +19,7 @@ import { LoaderComponent } from '../../design-system/ui/loader/loader.component'
     CommonModule,
     PluralizePipe,
     TagComponent, ButtonComponent, PaginationComponent, LoaderComponent,
-    ProductCardComponent, SearchbarComponent
+    ProductCardComponent, ProductCardPlaceholderComponent, SearchbarComponent
   ],
   templateUrl: './products-list-view.component.html',
   styleUrl: './products-list-view.component.scss',

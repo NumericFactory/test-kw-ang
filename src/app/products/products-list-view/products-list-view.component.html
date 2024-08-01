@@ -1,8 +1,8 @@
 <div class="container">
+    <ui-loader [style.opacity]="store.isLoading()?1:0"></ui-loader>
+
     <!-- 1 Searchbar-->
     <searchbar [categories]="store.categories()" (search)="searchProducts($event)" />
-
-    <ui-loader [style.opacity]="store.isLoading()?1:0"></ui-loader>
 
     <p class="total">{{store.pagination.total() | pluralize:'product'}}</p>
 
